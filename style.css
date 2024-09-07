@@ -85,9 +85,17 @@ body {
     color: white;
     padding: 10px;
     border-radius: 50px;
-   
-   
-}.sale-image{
+    cursor: pointer;
+    border: #a435f0 solid 1px;
+}
+.cate p:hover{
+    transition: 1s;
+    background-color: white;
+    border: #a435f0 solid 1px;
+    color: #a435f0;
+}
+
+.sale-image{
     position: relative;
 }
 .sale-image__offer{
@@ -98,7 +106,25 @@ body {
     position: absolute;
     top: 10%;
     left: 10%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    
 }
+@keyframes zoom{
+    0%{
+        
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+        
+    }
+}
+
 .sale-image img{
    
    margin-bottom: 2px;
